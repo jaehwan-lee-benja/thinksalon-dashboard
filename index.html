@@ -308,6 +308,19 @@ body.filtering .trow.match{opacity:1; background:var(--accent-wash)}
 .authbtn:disabled{opacity:.6; cursor:default}
 .authbtn.ghost{background:transparent; color:var(--muted); border-color:var(--border); margin-top:2px; font-size:12.5px; font-weight:500; padding:8px 14px}
 .authbtn.ghost:hover{color:var(--accent); border-color:var(--accent); background:transparent}
+
+/* ── 고객 고민 주제 (화두) ───────────────────────────────────────────── */
+.hwadu{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px 20px}
+.hw-note{font-size:12px; color:var(--muted); margin-bottom:14px; line-height:1.5}
+.hw-note b{color:var(--accent); font-weight:650}
+.hw-row{display:grid; grid-template-columns:92px 1fr 34px; align-items:center; gap:12px; padding:4.5px 0}
+.hw-lab{font-size:12.5px; font-weight:600; color:var(--ink-2); text-align:right; white-space:nowrap}
+.hw-track{height:15px; background:var(--inset); border-radius:4px; overflow:hidden}
+.hw-fill{height:100%; border-radius:4px; background:var(--accent); min-width:3px}
+.hw-row.top .hw-fill{background:var(--accent-2)}
+.hw-row.top .hw-lab{color:var(--accent); font-weight:700}
+.hw-val{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:12px; color:var(--muted); text-align:left}
+@media (max-width:560px){ .hw-row{grid-template-columns:78px 1fr 30px; gap:8px} .hw-lab{font-size:11.5px} }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -339,6 +352,28 @@ body.filtering .trow.match{opacity:1; background:var(--accent-wash)}
 
   <div class="sec-h"><span class="num">◆</span><h2>개념 라이브러리 — 38 도식 완비</h2></div>
   <div class="concept-strip" id="cstrip"></div>
+
+  <div class="sec-h"><span class="num">◇</span><h2>고객 고민 주제 — 화두 분포</h2><span class="hint">정독 분석 85명 · 222 태그 · 복수응답</span></div>
+  <div class="hwadu">
+    <div class="hw-note">고객이 들고 온 문제(화두)를 사례 카드에서 집계. 상위 3개 — <b>진로전환·자기가치·방향성</b>이 전체의 <b>42%</b>. (한 명이 여러 화두 가능)
+    </div>
+    <div class="hw-row top"><div class="hw-lab">진로전환</div><div class="hw-track"><div class="hw-fill" style="width:100%"></div></div><div class="hw-val">33</div></div>
+    <div class="hw-row top"><div class="hw-lab">자기가치</div><div class="hw-track"><div class="hw-fill" style="width:97%"></div></div><div class="hw-val">32</div></div>
+    <div class="hw-row top"><div class="hw-lab">방향성</div><div class="hw-track"><div class="hw-fill" style="width:88%"></div></div><div class="hw-val">29</div></div>
+    <div class="hw-row"><div class="hw-lab">사업체계화</div><div class="hw-track"><div class="hw-fill" style="width:52%"></div></div><div class="hw-val">17</div></div>
+    <div class="hw-row"><div class="hw-lab">일삶균형</div><div class="hw-track"><div class="hw-fill" style="width:45%"></div></div><div class="hw-val">15</div></div>
+    <div class="hw-row"><div class="hw-lab">관계갈등</div><div class="hw-track"><div class="hw-fill" style="width:42%"></div></div><div class="hw-val">14</div></div>
+    <div class="hw-row"><div class="hw-lab">번아웃</div><div class="hw-track"><div class="hw-fill" style="width:42%"></div></div><div class="hw-val">14</div></div>
+    <div class="hw-row"><div class="hw-lab">실행력</div><div class="hw-track"><div class="hw-fill" style="width:39%"></div></div><div class="hw-val">13</div></div>
+    <div class="hw-row"><div class="hw-lab">진로탐색</div><div class="hw-track"><div class="hw-fill" style="width:36%"></div></div><div class="hw-val">12</div></div>
+    <div class="hw-row"><div class="hw-lab">인정욕구</div><div class="hw-track"><div class="hw-fill" style="width:30%"></div></div><div class="hw-val">10</div></div>
+    <div class="hw-row"><div class="hw-lab">돈불안</div><div class="hw-track"><div class="hw-fill" style="width:27%"></div></div><div class="hw-val">9</div></div>
+    <div class="hw-row"><div class="hw-lab">건강</div><div class="hw-track"><div class="hw-fill" style="width:18%"></div></div><div class="hw-val">6</div></div>
+    <div class="hw-row"><div class="hw-lab">육아</div><div class="hw-track"><div class="hw-fill" style="width:18%"></div></div><div class="hw-val">6</div></div>
+    <div class="hw-row"><div class="hw-lab">리스크관리</div><div class="hw-track"><div class="hw-fill" style="width:15%"></div></div><div class="hw-val">5</div></div>
+    <div class="hw-row"><div class="hw-lab">리더십</div><div class="hw-track"><div class="hw-fill" style="width:12%"></div></div><div class="hw-val">4</div></div>
+    <div class="hw-row"><div class="hw-lab">소속감</div><div class="hw-track"><div class="hw-fill" style="width:9%"></div></div><div class="hw-val">3</div></div>
+  </div>
 
   <div class="sec-h"><span class="num">⇄</span><h2>데이터 계보 — 출처 → 처리 → 수렴</h2><span class="hint">두 출처가 개념 모델에서 수렴 · 스냅샷 2026-07</span></div>
   <div class="lineage">
